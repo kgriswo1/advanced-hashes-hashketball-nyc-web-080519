@@ -180,7 +180,7 @@ end
 
 def player_numbers(the_team_name)
   game = game_hash
-  home = game[:home]
+  home_name = game[:home]
   
   jersey = []
   
