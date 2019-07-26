@@ -234,6 +234,28 @@ def big_shoe_rebounds
   end
 end
 
+def most_points_scored
+  game = game_hash
+  players = game[:home][:players] + game[:away][:players]
+  points = 0
+  
+  players.each do |hash|
+    hash.each do |name, stats|
+      if stats[:points] > points
+        points = stats[:points]
+      end
+    end
+  end
+  
+  players.each do |hash|
+    hash.each do |name, stats|
+      if stats[:points] == points
+        return name
+      end
+    end
+  end
+end
+
 # def good_practices
 #   game_hash.each do |location, team_data|
 #     binding.pry
