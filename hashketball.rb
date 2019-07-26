@@ -217,7 +217,7 @@ def big_shoe_rebounds
   players = game[:home][:players] + game[:away][:players]
   shoe_size = 0
   
-  palyers.each do |hash|
+  players.each do |hash|
     hash.each do |name, stats|
       if stats[:shoe] > shoe_size
         shoe_size = stats[:shoe]
