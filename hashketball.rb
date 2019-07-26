@@ -184,7 +184,7 @@ def player_numbers(the_team_name)
   away_name = game[:away][:team_name]
   
   if home_name == the_team_name
-    
+    players = 
   end
   
   jersey = []
