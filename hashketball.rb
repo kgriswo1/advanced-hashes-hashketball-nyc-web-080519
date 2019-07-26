@@ -182,7 +182,11 @@ def player_numbers(the_team_name)
   game = game_hash
   jersey = []
   for game.each do |location, team_data|
-    location.each do 
+    team_data.each do |key, value|
+      if value == the_team_name
+        
+      end
+    end
   end
 end
 
