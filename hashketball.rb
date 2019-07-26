@@ -212,6 +212,28 @@ def player_stats(players_name)
   end
 end
 
+def big_shoe_rebounds
+  game = game_hash
+  players = game[:home][:players] + game[:away][:players]
+  shoe_size = 0
+  
+  palyers.each do |hash|
+    hash.each do |name, stats|
+      if stats[:shoe] > shoe_size
+        shoe_size = stats[:shoe]
+      end
+    end
+  end
+  
+  palyers.each do |hash|
+    hash.each do |name, stats|
+      if stats[:shoe] == shoe_size
+        return stats[:rebounds]
+      end
+    end
+  end
+end
+
 # def good_practices
 #   game_hash.each do |location, team_data|
 #     binding.pry
