@@ -225,7 +225,7 @@ def big_shoe_rebounds
     end
   end
   
-  palyers.each do |hash|
+  players.each do |hash|
     hash.each do |name, stats|
       if stats[:shoe] == shoe_size
         return stats[:rebounds]
