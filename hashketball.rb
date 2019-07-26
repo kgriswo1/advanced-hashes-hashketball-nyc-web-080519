@@ -180,7 +180,6 @@ end
 
 def player_numbers(the_team_name)
   game = game_hash
-  # players = []
   jersey = []
   
   home_name = game[:home][:team_name]
@@ -199,6 +198,8 @@ def player_numbers(the_team_name)
   end
   jersey
 end
+
+player_stats()
 
 # def good_practices
 #   game_hash.each do |location, team_data|
