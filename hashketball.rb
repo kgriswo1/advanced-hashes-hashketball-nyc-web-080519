@@ -298,6 +298,15 @@ def player_with_longest_name
   long_name
 end
 
+def long_name_steals_a_ton?
+  name = player_with_longest_name
+  game = game_hash
+  steals = 0
+  
+  
+  
+end
+
 # def good_practices
 #   game_hash.each do |location, team_data|
 #     binding.pry
