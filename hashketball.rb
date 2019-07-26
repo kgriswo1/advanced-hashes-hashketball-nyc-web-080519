@@ -180,7 +180,12 @@ end
 
 def player_numbers(the_team_name)
   game = game_hash
-  home_name = game[:home]
+  home_name = game[:home][:team_name]
+  away_name = game[:away][:team_name]
+  
+  if home_name == the_team_name
+    
+  end
   
   jersey = []
   
