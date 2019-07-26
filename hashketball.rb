@@ -199,7 +199,18 @@ def player_numbers(the_team_name)
   jersey
 end
 
-player_stats()
+def player_stats(players_name)
+  game = game_hash
+  players = game[:home][:players] + game[:away][:players]
+  
+  players.each do |hash|
+    hash.each do |name, stats|
+      if name == players_name
+        return stats
+      end
+    end
+  end
+end
 
 # def good_practices
 #   game_hash.each do |location, team_data|
