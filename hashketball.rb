@@ -283,6 +283,21 @@ def winning_team
   end
 end
 
+def player_with_longest_name
+  game = game_hash
+  players = game[:home][:players] + game[:away][:players]
+  long_name = ""
+  
+  players.each do |hash|
+    hash.each do |name, stats|
+      if name.length > long_name.length
+        long_name = name
+      end
+    end
+  end
+  long_name
+end
+
 # def good_practices
 #   game_hash.each do |location, team_data|
 #     binding.pry
