@@ -178,6 +178,12 @@ def team_names
   name
 end
 
+def player_numbers(the_team_name)
+  game = game_hash
+  jersey = []
+  for 
+end
+
 # def good_practices
 #   game_hash.each do |location, team_data|
 #     binding.pry
