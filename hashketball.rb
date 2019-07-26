@@ -180,14 +180,10 @@ end
 
 def player_numbers(the_team_name)
   game = game_hash
+  home = game[:home]
+  
   jersey = []
-  for game.each do |location, team_data|
-    team_data.each do |key, value|
-      if value == the_team_name
-        
-      end
-    end
-  end
+  
 end
 
 # def good_practices
