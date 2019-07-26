@@ -299,12 +299,26 @@ def player_with_longest_name
 end
 
 def long_name_steals_a_ton?
-  name = player_with_longest_name
+  long_name = player_with_longest_name
   game = game_hash
+  players = game[:home][:players] + game[:away][:players]
   steals = 0
   
+  players.each do |hash|
+    hash.each do |name, stats|
+      if stats[:steals] > steals
+        steals = stats[:steals]
+      end
+    end
+  end
   
-  
+  players.each do |hash|
+    hash.each do |name, stats|
+      if name == long_name
+        return stats[:steals] == steals
+      end
+    end
+  end
 end
 
 # def good_practices
