@@ -181,7 +181,9 @@ end
 def player_numbers(the_team_name)
   game = game_hash
   jersey = []
-  for 
+  for game.each do |location, team_data|
+    location.each do 
+  end
 end
 
 # def good_practices
